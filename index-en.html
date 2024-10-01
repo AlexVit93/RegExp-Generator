@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex Builder</title>
+    <link
+      rel="icon"
+      type="image/webp"
+      href="./img/back-regexp.webp"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="language-switcher">
+      <button id="switchToEn" disabled>EN</button>
+      <button id="switchToRu">RU</button>
+    </div>
+    <div class="container">
+      <h2>Regex Builder</h2>
+      <label for="inputText">Enter HTML or script code:</label>
+      <textarea
+        id="inputText"
+        rows="6"
+        placeholder="Paste your code here..."
+      ></textarea>
+
+      <button onclick="generateRegex()">Generate Regular Expression</button>
+
+      <h3>Generated Regular Expression:</h3>
+      <div class="output" id="outputRegex"></div>
+      <p>
+        &copy; <span id="year"></span> Kapral Productions (@kapral_prod_team).
+        All Right Reserved.
+      </p>
+    </div>
+
+    <script src="./js/main-en.js"></script>
+    <script>
+      document
+        .getElementById("switchToRu")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+      const currentYear = new Date().getFullYear();
+      const startYear = 2024;
+      const yearDisplay =
+        currentYear > startYear ? `${startYear} - ${currentYear}` : startYear;
+      document.getElementById("year").textContent = yearDisplay;
+    </script>
+  </body>
+</html>

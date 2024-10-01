@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../img/back-regexp.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.language-switcher {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.language-switcher button {
+  background-color: #f4f4f4;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+}
+
+.language-switcher button:hover {
+  background-color: #e0e0e0;
+}
+
+.language-switcher button img {
+  width: 20px;
+  height: 20px;
+}
+
+.container {
+  max-width: 830px;
+  padding: 20px 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+textarea {
+  width: 795px;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: #28a745;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.output {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ccc;
+  word-wrap: break-word;
+  margin: 20px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 5em;
+}
+
+p {
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #ccc;
+  width: 100%;
+}
