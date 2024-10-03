@@ -11,13 +11,23 @@ function generateRegex() {
     return;
   }
 
+  const attributeMap = {
+    src: "src",
+    id: "id",
+    "data-div": "data-div",
+    "data-code": "data-code",
+    "data-version": "data-version",
+    "data-club": "data-club",
+  };
+
   let selectedPrefix = "body";
   let condition = "";
 
-  if (inputText.includes("src=")) {
-    selectedPrefix = "src";
-  } else if (inputText.includes("id=")) {
-    selectedPrefix = "id";
+  for (const [key, value] of Object.entries(attributeMap)) {
+    if (inputText.includes(`${key}=`)) {
+      selectedPrefix = value;
+      break;
+    }
   }
 
   const escapedText = escapeSpecialChars(inputText);
